@@ -43,10 +43,13 @@ input[type=submit] {
   background-color: black;
   color: white;
   width: 100%;
+  transition: all 0.5s;
+
 }
 
 input[type=submit]:hover {
   background-color: white;
   color: black;
   transition: all 0.5s;
+  
 }
