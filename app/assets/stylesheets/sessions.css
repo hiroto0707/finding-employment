@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  justify-content: center;
+  width:  100px;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgb(51 47 47 / 63%);
+  background-color: white;
+  box-sizing: border-box;
+}
