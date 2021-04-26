@@ -1,24 +1,21 @@
-<header class="header">
-  <div class="inner">
-    <div class="nav">
-      <div class="nav__left">
-        <h1 class="grid-6"><a href="/">WORK</a></h1>
-      </div>
-        <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%#= link_to "メモ投稿","#", class: "post" %>
-            <%#= link_to "投稿", "#", class: "post" %>
-          </div>
-
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-          </div>
-        <% end %>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%#= image_tag 'house.png' %>
+    </div>
+    <div class="carousel-item">
+      <img src="house.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <%#= image_tag 'test.png' %>
     </div>
   </div>
-</header>
-<body>   
-</body>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
