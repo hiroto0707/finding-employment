@@ -2,15 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  color: black;
+
+.align-items-center {
+  align-items: center; 
+}
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: 1000px;
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .rounded-circle {
-  border-radius: 50%!important;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  line-height: 200px;
+  text-align: right;
+}
+
+.display-4 {
+  font-size: 5rem;
+  font-weight: 500px;
+  line-height: 1.2;
 }

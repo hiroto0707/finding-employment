@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+
 <html>
   <head>
     <title>FindingEmployment</title>
@@ -9,20 +9,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <div class="header__bar row">
+    <header class="header">
+      <div class="header__bar row">
         <h1 class="grid-6"><a href="/">WORK</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= "Hello!  " + current_user.name %>
             <ul class="user__info">
               <li>
-                <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                <%= link_to "メモ投稿","#", class: "post" %>
-                <%= link_to "投稿", "#", class: "post" %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                <%= link_to "マイページ","/users/#{current_user.id}", class: "post" %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"  %>
+                <%= link_to "投稿する","#", class: "post" %>
+            <%= link_to "メモ","#", class: "post" %>
               </li>
             </ul>
-          </span>
           </div>
         <% else %>
           <div class="grid-6">
@@ -33,5 +32,10 @@
       </div>
     </header>
     <%= yield %>
+    <footer>
+      <p>
+          FindingEmployment
+      </p>
+    </footer>
   </body>
 </html>
