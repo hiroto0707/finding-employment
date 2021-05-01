@@ -71,6 +71,7 @@ a {
   color: $cBlack;
   text-align: center;
   text-decoration: none;
+
 }
 
  a:hover {
@@ -133,11 +134,17 @@ input[type="submit" i]:hover {
 
 p {
   text-align: center;
-  color: $cWhite;
+  color: $cBlack;
 }
 
 ul li {
   list-style: none;
 }
+
+.contact {
+  background-color: $cWhite;
+}
+
+
 
 

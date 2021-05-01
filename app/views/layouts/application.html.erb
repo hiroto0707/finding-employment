@@ -18,7 +18,7 @@
               <li>
                 <%= link_to "マイページ","/users/#{current_user.id}", class: "post" %>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"  %>
-                <%= link_to "投稿する","#", class: "post" %>
+                <%= link_to "投稿","#", class: "post" %>
             <%= link_to "メモ","#", class: "post" %>
               </li>
             </ul>
@@ -32,10 +32,6 @@
       </div>
     </header>
     <%= yield %>
-    <footer>
-      <p>
-          FindingEmployment
-      </p>
-    </footer>
+  
   </body>
 </html>
