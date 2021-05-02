@@ -3,8 +3,8 @@ class Memos < ActiveRecord::Migration[6.0]
     create_table :memos do |t|
       t.string :title,           null: false
       t.text :body,              null: false
-      t.integer :industry_id,    null: false
-      t.references :user,             null: false,foreign_key: true
+      t.integer :industry_id    
+      t.references :user,        null: false,foreign_key: true
       t.timestamps
     end
   end
