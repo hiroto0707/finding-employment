@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+ @import "bootstrap"; 
+ @import "users";
+
+
+
+ $cWhite: white;
+ $cBlack: black;
+
+body {
+  background-image: url(b.png);
+  background-size: auto;
+}
+
+ header.header {
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 62px;
+}
+
+header.header div.header__bar.row div.grid-6 a.post {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid $cBlack;
+  color: $cBlack;
+  background-color: $cWhite;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 20px;
+  display: inline-block;
+  transition: background-color 0.5s;
+  text-decoration: none;
+}
+header.header div.header__bar.row div.grid-6 a.post:hover {
+  color: $cWhite;
+  background-color: $cBlack;
+}
+
+header.header div.header__bar.row div.grid-6 {
+  display: table-cell;
+  float: right;
+  text-align: right;
+  margin-left: auto;
+}
+
+h1 {
+  text-indent: 1em;
+}
+
+a {
+  color: $cBlack;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+ a:hover {
+  text-decoration: none;
+  color: $cBlack;
+  }
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 700px;
+}
+.contents {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  max-width: 660px;  
+  padding: 30px;
+}
+ 
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  background-color: $cWhite;
+  box-sizing: border-box;
+  box-shadow: 0 0 13px 2px black;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+input {
+  width: 50%;
+}
+
+input[type="submit" i] {
+  width: 50%;
+  margin: 15px;
+  padding: 5px;
+  color: $cWhite;
+  background-color: $cBlack;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+}
+
+input[type="submit" i]:hover {
+  color: $cBlack;
+  background-color: $cWhite;
+}
+
+p {
+  text-align: center;
+  color: $cBlack;
+}
+
+ul li {
+  list-style: none;
+}
+
+.contact {
+  background-color: $cWhite;
+}
+
+
+
+

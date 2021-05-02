@@ -12,6 +12,7 @@
 
 - has_many : enterprises
 - has_one : memo
+- has_many : comments
 
 ## memos テーブル
 
@@ -53,3 +54,14 @@
 
 - belongs_to : user
 - belongs_to : enterprise
+
+## comments テーブル
+
+| Column     | Type   | Options     |
+| --------   | ------ | ----------- |
+| text       | text   | not null    |
+| user       | references |         |
+
+### Association
+
+- belongs_to : user
