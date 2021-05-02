@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <title>FindingEmployment</title>
@@ -16,7 +15,6 @@
           <div class="user_nav grid-6">
             <ul class="user__info">
               <li>
-                <%= link_to "マイページ","/users/#{current_user.id}", class: "post" %>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"  %>
                 <%= link_to "投稿","#", class: "post" %>
             <%= link_to "メモ","#", class: "post" %>
@@ -32,6 +30,5 @@
       </div>
     </header>
     <%= yield %>
-  
   </body>
 </html>
