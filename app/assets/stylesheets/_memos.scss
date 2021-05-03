@@ -3,4 +3,59 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$cWhite: white;
+$cBlack: black;
 
+
+.article-box {
+  height:800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+select {
+  text-transform: none;
+  border: 2px solid $cBlack;
+}
+
+.title {
+  height: 30px;
+  width: 50%;
+  margin: 20px;
+  border: 2px solid $cBlack;
+}
+
+.text {
+  height: 50%;
+  width: 50%;
+  resize:none;
+  margin-bottom: 20px;
+  border: 2px solid $cBlack;
+}
+
+.genre-select{
+  height: 30px;
+  width: 250px;
+}
+
+.btn {
+  width: 50%;
+  margin-top: 20px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: $cWhite;
+  background-color: $cBlack;
+  border: 2px solid $cBlack;
+  border-radius: 5px;
+  
+}
+
+.btn:hover {
+  width: 50%;
+  color: $cBlack;
+  background-color: $cWhite;
+  border: 2px solid $cBlack;
+}
