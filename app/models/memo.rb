@@ -8,7 +8,12 @@ class Memo < ApplicationRecord
    validates :title
    validates :body
   end
+  
+  validates :industry_id, numericality: { other_than: 0 }
 
-  validates :industry_id, numericality: { other_than: 1 }
+  def industry
+    Memo.where(industry_id: @industry)
+  end
+
 
 end

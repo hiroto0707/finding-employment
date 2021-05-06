@@ -1,7 +1,12 @@
 class MemosController < ApplicationController
 
   def index
-    @memos = Memo.all
+    if params[:industry_id]
+      @industry = Memo.find(params[:industry_id])
+      @memos = @industry.post.order(industry_id: :desc).all
+    else
+      @memos = Memo.order(industry_id: :desc).all
+    end
   end
 
   def new
@@ -9,9 +14,9 @@ class MemosController < ApplicationController
   end
 
   def create
-    @memo = Meomo.new(memo_params)
+    @memo = Memo.new(memo_params)
     if @memo.save
-      redirect to memos_path
+      redirect_to memos_path
     else
       render :new
     end  
@@ -19,6 +24,6 @@ class MemosController < ApplicationController
 
   private
   def memo_params
-    params.require(:memo).permit(:title, :body, industry_id).merge(user_id: current_user.id)
+    params.require(:memo).permit(:title, :body, :industry_id).merge(user_id: current_user.id)
   end
 end
