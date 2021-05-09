@@ -1,9 +1,11 @@
+<body class="background">
 <%= form_with model: @memo, url:memos_path,method: :post, class: "post" ,local: true do |f| %>
   <div class="article-box">
     メモ
     <%= f.collection_select(:industry_id, Industry.all, :id, :industry, {}, {class:"industry-select"}) %>
     <%= f.text_field :title, class:"title", placeholder:"企業名" %>
-    <%= f.text_area :body, class:"text" %>
+    <%= f.text_area :body, class:"text", placeholder:"本文" %>
     <%= f.submit "保存" ,class:"btn" %>
   </div>
 <% end %>
+</body>

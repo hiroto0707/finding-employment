@@ -1,8 +1,143 @@
-<% @memos.each do |industry| %>>
-  <h3 class='industry-name'>
-    <%= industry.title %>
-  </h3>
-  <div class='industry-body'>
-    <%= industry.body %>
+<body class="back">
+<div class='memo-info'>
+<div class="industry-category">IT・ソフトウェア・情報処理</div>
+ <ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+   <% if memo.industry_id == 1%>
+   <div class="memo">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
   </div>
-<% end %> 
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>  
+
+<div class='memo-info'>
+ <div class="industry-category">不動産・建築</div>
+ <ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+    <% if memo.industry_id == 2%>
+    <div class="memo">
+      <%= memo.industry.industry %>
+        <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+      </div>
+    <% nil %>
+    <% end %> 
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">人材</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+   <% if memo.industry_id == 3%>
+  <div class="memo">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">金融・銀行・証券・保険</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+   <% if memo.industry_id == 4%>
+  <div class="card-body">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">コンサル</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+   <% if memo.industry_id == 5%>
+  <div class="card-body">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">メーカー</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+  <li class='list'>
+   <% if memo.industry_id == 6%>
+  <div class="card-body">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">商社</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+   <% if memo.industry_id == 7%>
+  <div class="card-body">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">広告・マスコミ</div>
+<ul class='memo-lists'>
+  <% @memos.each do |memo| %>
+   <% if memo.industry_id == 8%>
+  <div class="card-body">
+  <%= memo.industry.industry %>
+    <h5 class="card-title"><%= memo.title %></h5>
+    <% else %>
+  </div>
+  <% nil %>
+  <% end %>
+  <% end %>
+  </li> 
+  </ul>
+</div>
+</body>

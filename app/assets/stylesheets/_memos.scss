@@ -6,6 +6,10 @@
 $cWhite: white;
 $cBlack: black;
 
+.background {
+  background-image: url("memo.png");
+}
+
 
 .article-box {
   height:800px;
@@ -59,4 +63,42 @@ select {
   background-color: $cWhite;
   border: 2px solid $cBlack;
 }
+
+
+//以下はindex.html.erb
+
+.back {
+  list-style: none;
+}
+
+.industry-category {
+  font-weight: 300px;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.memo-info {
+  margin-top: 7%;
+  list-style: none;
+}
+
+.memo {
+  display: inline-block;
+  padding: 15px;
+}
+.list{
+  float: left;
+  display: inline-block;
+  list-style: none;
+  border: 1px solid $cBlack;
+  margin: 5px;
+}
+
+
+
+
+
+
+
 

@@ -11,9 +11,4 @@ class Memo < ApplicationRecord
   
   validates :industry_id, numericality: { other_than: 0 }
 
-  def industry
-    Memo.where(industry_id: @industry)
-  end
-
-
 end

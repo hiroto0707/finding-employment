@@ -2,8 +2,8 @@ class MemosController < ApplicationController
 
   def index
     if params[:industry_id]
-      @industry = Memo.find(params[:industry_id])
-      @memos = @industry.post.order(industry_id: :desc).all
+      @industrys = Industry.find(params[:industry_id])
+      @memos = @industrys.post.order(industry_id: :desc).all
     else
       @memos = Memo.order(industry_id: :desc).all
     end

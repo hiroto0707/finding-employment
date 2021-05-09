@@ -9,10 +9,6 @@ class Industry < ActiveHash::Base
     { id: 6, industry: 'メーカー'                    },
     { id: 7, industry: '商社'                        },
     { id: 8, industry: '広告・マスコミ'              },
-    { id: 9, industry: 'メーカー'                    },
-    { id: 10, industry: '旅行・観光'                 },
-    { id: 11, industry: 'インフラ・交通'             },
-    { id: 12, industry: '官公庁・公社・団体'         },
   ]
 
   include ActiveHash::Associations
