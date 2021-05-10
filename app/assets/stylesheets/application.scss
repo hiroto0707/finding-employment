@@ -14,16 +14,13 @@
  */
  @import "bootstrap"; 
  @import "users";
-
+ @import url("_memos.scss");
 
 
  $cWhite: white;
  $cBlack: black;
 
-body {
-  background-image: url(b.png);
-  background-size: auto;
-}
+
 
  header.header {
   padding: 10px;
@@ -86,6 +83,7 @@ a {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 700px;
+  
 }
 .contents {
   display: block;
@@ -97,6 +95,7 @@ a {
   margin-bottom: 50px;
   max-width: 660px;  
   padding: 30px;
+  
 }
  
 .container {
@@ -135,6 +134,7 @@ input[type="submit" i]:hover {
 p {
   text-align: center;
   color: $cBlack;
+  text-align:left;
 }
 
 ul li {

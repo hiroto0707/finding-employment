@@ -16,12 +16,13 @@
 
 ## memos テーブル
 
-| Column        | Type    | Options                           |
-| ------------- | ------- | --------------------------------  |
-| title         | string  | null: false                       |
-| body          | text    | null: false                       |
-| industry_id   | integer | null: false                       |
-| user          | references | null: false, foreign_key: true |
+| Column            | Type    | Options                           |
+| ----------------- | ------- | --------------------------------  |
+| title             | string  | null: false                       |
+| selection＿status | text    | null: false                       |
+| body              | text    | null: false                       |
+| industry_id       | integer |                                   |
+| user              | references | null: false, foreign_key: true |
 
 ### Association
 

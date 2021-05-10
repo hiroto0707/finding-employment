@@ -1,0 +1,165 @@
+<body class="back">
+<div class='memo-info'>
+<div class="industry-category">IT・ソフトウェア・情報処理</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 1 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">不動産・建築</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 2 %>
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-dark">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">人材</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 3 %>
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-success">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+  <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+
+<div class='memo-info'>
+<div class="industry-category">金融・銀行・証券・保険</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 4 %>
+<div class="card border-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-danger">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+<% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">コンサル</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 5 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">メーカー</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 6 %>
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-dark">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='memo-info'>
+<div class="industry-category">商社</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 7 %>
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-success">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+  <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+
+<div class='memo-info'>
+<div class="industry-category">広告・マスコミ</div>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+ <% if memo.industry_id == 8 %>
+<div class="card border-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-danger">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+<% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+</body>
+
+
