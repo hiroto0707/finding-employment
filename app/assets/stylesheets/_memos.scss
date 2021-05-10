@@ -33,7 +33,7 @@ select {
 }
 
 .text {
-  height: 50%;
+  height: 25%;
   width: 50%;
   resize:none;
   margin-bottom: 20px;
@@ -67,9 +67,6 @@ select {
 
 //以下はindex.html.erb
 
-.back {
-  list-style: none;
-}
 
 .industry-category {
   font-weight: 300px;
@@ -88,12 +85,11 @@ select {
   padding: 15px;
 }
 .list{
-  float: left;
   display: inline-block;
   list-style: none;
-  border: 1px solid $cBlack;
   margin: 5px;
 }
+
 
 
 

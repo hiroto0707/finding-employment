@@ -6,6 +6,7 @@ class Memo < ApplicationRecord
 
   with_options presence: true do
    validates :title
+   validates :selection_status
    validates :body
   end
   
