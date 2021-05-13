@@ -10,6 +10,7 @@
   <div class="card-body text-info">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%#= link_to "編集", edit_memo_path(@memo.id), method: :get, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -58,7 +59,6 @@
 </li> 
 </ul> 
 </div>
-
 
 <div class='memo-info'>
 <div class="industry-category">金融・銀行・証券・保険</div>
@@ -139,7 +139,6 @@
 </li> 
 </ul> 
 </div>
-
 
 <div class='memo-info'>
 <div class="industry-category">広告・マスコミ</div>

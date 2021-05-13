@@ -1,12 +1,8 @@
 class MemosController < ApplicationController
-
+  before_action :authenticate_user!, only: [:index]
+  
   def index
-    if params[:industry_id]
-      @industrys = Industry.find(params[:industry_id])
-      @memos = @industrys.post.order(industry_id: :desc).all
-    else
-      @memos = Memo.order(industry_id: :desc).all
-    end
+    @memos = current_user.memos.order(industry_id: :desc).all
   end
 
   def new
@@ -22,8 +18,19 @@ class MemosController < ApplicationController
     end  
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
   private
   def memo_params
     params.require(:memo).permit(:title, :selection_status, :body, :industry_id).merge(user_id: current_user.id)
   end
 end
+
+
