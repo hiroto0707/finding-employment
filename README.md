@@ -21,7 +21,7 @@
 | title             | string  | null: false                       |
 | selection＿status | text    | null: false                       |
 | body              | text    | null: false                       |
-| industry_id       | integer |                                   |
+| industry_id       | integer | null: false                       |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
