@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
  has_many :enterprises  
  has_many :comments
- has_one :memo
+ has_many :memos
  
  validates :name, presence: true
  validates :password, presence: true, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }

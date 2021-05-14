@@ -73,6 +73,7 @@ select {
   font-size: 30px;
   text-align: center;
   margin-top: 10%;
+  font-weight: bold;
 }
 
 .memo-info {
@@ -90,6 +91,24 @@ select {
   margin: 5px;
 }
 
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.memo-red-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 30px;
+}
+ 
 
 
 

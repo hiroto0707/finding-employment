@@ -10,6 +10,8 @@
   <div class="card-body text-info">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, :class=>"memo-red-btn" %>
+   <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -30,6 +32,8 @@
   <div class="card-body text-dark">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -50,6 +54,8 @@
   <div class="card-body text-success">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
   <% else %>
     <% nil %>
   </div>
@@ -58,7 +64,6 @@
 </li> 
 </ul> 
 </div>
-
 
 <div class='memo-info'>
 <div class="industry-category">金融・銀行・証券・保険</div>
@@ -71,6 +76,8 @@
   <div class="card-body text-danger">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
 <% else %>
     <% nil %>
   </div>
@@ -91,6 +98,8 @@
   <div class="card-body text-info">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -111,6 +120,8 @@
   <div class="card-body text-dark">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -131,6 +142,8 @@
   <div class="card-body text-success">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
   <% else %>
     <% nil %>
   </div>
@@ -139,7 +152,6 @@
 </li> 
 </ul> 
 </div>
-
 
 <div class='memo-info'>
 <div class="industry-category">広告・マスコミ</div>
@@ -152,6 +164,8 @@
   <div class="card-body text-danger">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
 <% else %>
     <% nil %>
   </div>
