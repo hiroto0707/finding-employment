@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :set_memo, only: [:edit, :update, :destroy]
+  before_action :move_to_root_path, only: [:edit, :update, :destroy]
   
   def index
     @memos = current_user.memos.order(industry_id: :desc).all
@@ -36,9 +37,15 @@ class MemosController < ApplicationController
   end
 
   private
-
+  
   def set_memo
     @memo = Memo.find(params[:id])
+  end
+
+  def move_to_root_path 
+    unless user_signed_in? && current_user.id == @memo.user_id
+      redirect_to root_path
+    end  
   end
 
   def memo_params
