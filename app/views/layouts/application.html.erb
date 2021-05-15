@@ -16,7 +16,7 @@
             <ul class="user__info">
               <li>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"  %>
-                <%= link_to "投稿", "#", class: "post" %>
+                <%= link_to "投稿", new_enterprise_path, class: "post" %>
                 <%= link_to "メモ", new_memo_path, class: "post" %>
                 <%= link_to "マイページ", memos_path, class: "post" %>
               </li>

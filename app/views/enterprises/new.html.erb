@@ -1,0 +1,12 @@
+<body class="background">
+<%= form_with model: @enterprise, url:enterprises_path,method: :post, class: "post" ,local: true do |f| %>
+  <div class="article-box">
+    投稿
+    <%= f.collection_select(:industry_id, Industry.all, :id, :industry, {}, {class:"industry-select"}) %>
+    <%= f.text_field :title, class:"title", placeholder:"企業名" %>
+    <%= f.text_area :theme, class:"text", placeholder:"選考状況・面接日程・企業の特徴等" %>
+    <%= f.text_area :text, class:"text", placeholder:"反省点や良かった点" %>
+    <%= f.submit "投稿" ,class:"btn" %>
+  </div>
+<% end %>
+</body>
