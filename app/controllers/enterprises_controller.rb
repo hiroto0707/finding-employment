@@ -1,6 +1,6 @@
 class EnterprisesController < ApplicationController
   def index
-    @enterprises = Enterprise.all
+    @enterprises = Enterprise.includes(:user).order(industry_id: :desc)
   end
 
   def new
@@ -19,6 +19,6 @@ class EnterprisesController < ApplicationController
   private
 
   def enterprise_params
-    params.require(:enterprise).permit(:title, :text, :theme, :industry_id).marge(user_id: current_user.id)
+    params.require(:enterprise).permit(:title, :text, :theme, :industry_id).merge(user_id: current_user.id)
   end
 end
