@@ -3,7 +3,6 @@ class EnterprisesController < ApplicationController
 
   def index
     @enterprises = Enterprise.includes(:user).order(industry_id: :desc)
-    
   end
 
   def new
