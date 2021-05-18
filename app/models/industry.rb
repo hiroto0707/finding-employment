@@ -13,4 +13,5 @@ class Industry < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :memos
+  has_many :enterprises
 end

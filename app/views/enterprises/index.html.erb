@@ -1,0 +1,184 @@
+<body class="back">
+<div class='enterpise-info'>
+<div class="industry-category">IT・ソフトウェア・情報処理</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 1 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">不動産・建築</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 2 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">人材</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 3 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">金融・銀行・証券・保険</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 4 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">コンサル</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 5 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">メーカー</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 6 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">商社</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 7 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+<div class='enterpise-info'>
+<div class="industry-category">広告・マスコミ</div>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list'>
+ <% if enterprise.industry_id == 8 %>
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+   <%= enterprise.title %>
+   <%= enterprise.user.name + "さん" %>
+  </div>
+  <div class="card-body text-info">
+    <h5 class="card-title"><%= enterprise.theme %></h5>
+    <p class="card-text"><%= enterprise.text %></p>
+    <% else %>
+    <% nil %>
+  </div>
+  <% end %>
+<% end %>
+</li> 
+</ul> 
+</div>

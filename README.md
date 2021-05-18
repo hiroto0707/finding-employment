@@ -21,7 +21,7 @@
 | title             | string  | null: false                       |
 | selection＿status | text    | null: false                       |
 | body              | text    | null: false                       |
-| industry_id       | integer |                                   |
+| industry_id       | integer | null: false                       |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
@@ -33,6 +33,7 @@
 | Column        | Type    | Options                           |
 | ------------- | ------- | --------------------------------- |
 | industry_id   | integer | null: false                       |
+| title         | string  | null: false                       |
 | image         | ActiveStorageで実装                         |
 | text          | text    | null: false                       |
 | theme         | text    | null: false                       | 
