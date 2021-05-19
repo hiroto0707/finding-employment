@@ -1,6 +1,6 @@
 class EnterprisesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_enterprise, only: [:show, :edit, :update, :destroy]
+  before_action :enterprise_return, only: [:show, :edit, :update, :destroy]
 
   def index
     @enterprises = Enterprise.includes(:user).order(industry_id: :desc) 
@@ -43,23 +43,15 @@ class EnterprisesController < ApplicationController
   def destroy
     @enterprise.destroy
     redirect_to enterprises_path
-    unless user_signed_in? && current_user.id == @enterprise.user_id
-      redirect_to root_path
-    end 
   end
 
 
   private
 
-  def set_enterprise
+  def enterprise_return
     @enterprise = Enterprise.find(params[:id])
   end
 
-  #def move_to_root_path  
-    #unless user_signed_in? && current_user.id == @enterprise.user_id
-      #redirect_to root_path
-    #end  
-  #end
 
 
   def enterprise_params
