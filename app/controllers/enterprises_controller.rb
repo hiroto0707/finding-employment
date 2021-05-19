@@ -1,8 +1,9 @@
 class EnterprisesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_enterprise, only: [:show, :edit, :update, :destroy]
 
   def index
-    @enterprises = Enterprise.includes(:user).order(industry_id: :desc)
+    @enterprises = Enterprise.includes(:user).order(industry_id: :desc) 
   end
 
   def new
@@ -18,10 +19,14 @@ class EnterprisesController < ApplicationController
     end  
   end
 
-  def show
+
+  def show 
   end
 
   def edit
+    unless user_signed_in? && current_user.id == @enterprise.user_id
+      redirect_to root_path
+    end  
   end
 
   def update
@@ -30,11 +35,17 @@ class EnterprisesController < ApplicationController
     else
       render :edit
     end  
+    unless user_signed_in? && current_user.id == @enterprise.user_id
+      redirect_to root_path
+    end 
   end
 
   def destroy
     @enterprise.destroy
     redirect_to enterprises_path
+    unless user_signed_in? && current_user.id == @enterprise.user_id
+      redirect_to root_path
+    end 
   end
 
 
@@ -43,6 +54,12 @@ class EnterprisesController < ApplicationController
   def set_enterprise
     @enterprise = Enterprise.find(params[:id])
   end
+
+  #def move_to_root_path  
+    #unless user_signed_in? && current_user.id == @enterprise.user_id
+      #redirect_to root_path
+    #end  
+  #end
 
 
   def enterprise_params
