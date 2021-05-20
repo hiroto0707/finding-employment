@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :memos
-  resources :enterprises, only: [:index, :new, :create]
+  resources :enterprises, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 end

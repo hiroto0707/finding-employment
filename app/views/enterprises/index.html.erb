@@ -4,18 +4,26 @@
 <ul class='enterpise-lists'>
 <% @enterprises.each do |enterprise| %>
  <li class='list'>
- <% if enterprise.industry_id == 1 %>
-<div class="card border-info mb-3" style="max-width: 18rem;">
-  <div class="card-header">
-   <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
-  </div>
-  <div class="card-body text-info">
-    <h5 class="card-title"><%= enterprise.theme %></h5>
-    <p class="card-text"><%= enterprise.text %></p>
+  <% if enterprise.industry_id == 1 %>
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <%= enterprise.title %>
+      <div class="namecolor">
+       <%= enterprise.user.name + "さん" %>
+      </div>
+    </div>
+    <div class="card-body text-info">
+      <h5 class="card-title"><%= enterprise.theme %></h5>
+      <p class="card-text"><%= enterprise.text %></p>
+    <% if user_signed_in? && current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
     <% else %>
+     <% nil %>
+    <% end %>
+  <% else %>
     <% nil %>
-  </div>
+    </div>
   <% end %>
 <% end %>
 </li> 
@@ -31,11 +39,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+    <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
+    </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -54,11 +70,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+   <div class="namecolor">
+       <%= enterprise.user.name + "さん" %>
+      </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -77,11 +101,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+   <div class="namecolor">
+       <%= enterprise.user.name + "さん" %>
+      </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -100,11 +132,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+    <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
+    </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -123,11 +163,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+   <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
+    </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -146,11 +194,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+    <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
+    </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>
@@ -169,11 +225,19 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-   <%= enterprise.user.name + "さん" %>
+    <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
+    </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
     <p class="card-text"><%= enterprise.text %></p>
+    <% if current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
     <% else %>
     <% nil %>
   </div>

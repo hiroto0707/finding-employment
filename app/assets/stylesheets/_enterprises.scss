@@ -3,7 +3,49 @@
   background-image: url("office.png");
 } 
 
+.enterprise-box {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.theme {
+  height: 30%;
+  width: 50%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+
+.text {
+  height: 20%;
+  width: 50%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
+}
+
+.namecolor {
+  color: #00000082;
+}
+
+.enterprise-red-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 30px;
 }

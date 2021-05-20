@@ -98,6 +98,7 @@ background-color: #e4e4e48c;
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
   font-weight: bold;
+  display: block;
   text-align: center;
 }
 

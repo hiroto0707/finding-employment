@@ -1,5 +1,5 @@
 class MemosController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!
   before_action :set_memo, only: [:edit, :update, :destroy]
   before_action :move_to_root_path, only: [:edit, :update, :destroy]
   
