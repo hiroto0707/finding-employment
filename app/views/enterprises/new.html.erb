@@ -1,10 +1,10 @@
 <body class="back-image">
 <%= form_with model: @enterprise, url:enterprises_path,method: :post, class: "post" ,local: true do |f| %>
-  <div class="article-box">
+  <div class="enterprise-box">
     投稿
     <%= f.collection_select(:industry_id, Industry.all, :id, :industry, {}, {class:"industry-select"}) %>
     <%= f.text_field :title, class:"title", placeholder:"企業名" %>
-    <%= f.text_area :theme, class:"text", placeholder:"選考段階・面接で聞かれたこと等々" %>
+    <%= f.text_area :theme, class:"theme", placeholder:"選考段階・面接で聞かれたこと等々" %>
     <%= f.text_area :text, class:"text", placeholder:"選考での感想やアドバイス" %>
     <%= f.submit "投稿" ,class:"btn" %>
   </div>

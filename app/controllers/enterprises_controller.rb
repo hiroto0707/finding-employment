@@ -24,20 +24,14 @@ class EnterprisesController < ApplicationController
   end
 
   def edit
-    unless user_signed_in? && current_user.id == @enterprise.user_id
-      redirect_to root_path
-    end  
   end
 
   def update
     if @enterprise.update(enterprise_params)
-      redirect_to enterprises_path
+      redirect_to root_path
     else
       render :edit
     end  
-    unless user_signed_in? && current_user.id == @enterprise.user_id
-      redirect_to root_path
-    end 
   end
 
   def destroy
@@ -50,9 +44,10 @@ class EnterprisesController < ApplicationController
 
   def enterprise_return
     @enterprise = Enterprise.find(params[:id])
+    unless user_signed_in? && current_user.id == @enterprise.user_id
+      redirect_to root_path
+    end 
   end
-
-
 
   def enterprise_params
     params.require(:enterprise).permit(:title, :text, :theme, :industry_id).merge(user_id: current_user.id)
