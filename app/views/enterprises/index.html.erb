@@ -9,8 +9,7 @@
     <div class="card-header">
       <%= enterprise.title %>
       <div class="namecolor">
-      <%# binding.pry %>
-        <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+       <%= enterprise.user.name + "さん" %>
       </div>
     </div>
     <div class="card-body text-info">
@@ -39,9 +38,9 @@
  <% if enterprise.industry_id == 2 %>
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
-    <%= enterprise.title %>
+   <%= enterprise.title %>
     <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+      <%= enterprise.user.name + "さん" %>
     </div>
   </div>
   <div class="card-body text-info">
@@ -71,9 +70,9 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-    <div class="namecolor">
-     <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
-    </div>
+   <div class="namecolor">
+       <%= enterprise.user.name + "さん" %>
+      </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
@@ -102,9 +101,9 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-    <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
-    </div>
+   <div class="namecolor">
+       <%= enterprise.user.name + "さん" %>
+      </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title"><%= enterprise.theme %></h5>
@@ -134,7 +133,7 @@
   <div class="card-header">
    <%= enterprise.title %>
     <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+      <%= enterprise.user.name + "さん" %>
     </div>
   </div>
   <div class="card-body text-info">
@@ -164,8 +163,8 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">
    <%= enterprise.title %>
-    <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+   <div class="namecolor">
+      <%= enterprise.user.name + "さん" %>
     </div>
   </div>
   <div class="card-body text-info">
@@ -196,7 +195,7 @@
   <div class="card-header">
    <%= enterprise.title %>
     <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+      <%= enterprise.user.name + "さん" %>
     </div>
   </div>
   <div class="card-body text-info">
@@ -227,7 +226,7 @@
   <div class="card-header">
    <%= enterprise.title %>
     <div class="namecolor">
-      <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+      <%= enterprise.user.name + "さん" %>
     </div>
   </div>
   <div class="card-body text-info">

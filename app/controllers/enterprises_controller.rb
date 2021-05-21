@@ -1,6 +1,6 @@
 class EnterprisesController < ApplicationController
   before_action :authenticate_user!
-  before_action :enterprise_return, only: [:edit, :update, :destroy]
+  before_action :enterprise_return, only: [:show, :edit, :update, :destroy]
 
   def index
     @enterprises = Enterprise.includes(:user).order(industry_id: :desc) 
@@ -17,6 +17,10 @@ class EnterprisesController < ApplicationController
     else
       render :new
     end  
+  end
+
+
+  def show 
   end
 
   def edit

@@ -5,5 +5,4 @@ Rails.application.routes.draw do
 
   resources :memos
   resources :enterprises, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-  resources :users, only: :show
 end
