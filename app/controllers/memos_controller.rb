@@ -36,6 +36,10 @@ class MemosController < ApplicationController
     redirect_to memos_path
   end
 
+  def search
+  end
+  
+
   private
   
   def set_memo

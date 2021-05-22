@@ -10,6 +10,24 @@ $cBlack: black;
   background-image: url("memo.png");
 }
 
+.search-form {
+  margin-top: 5%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.search-form .search-input {
+  width: 30%;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1.5px solid $cBlack;
+
+}
+
+.search-form .search-btn {
+  width: 10%;
+  padding: 10px;
+}
 
 .article-box {
   height:800px;
@@ -76,7 +94,7 @@ background-color: #e4e4e48c;
   font-weight: 300px;
   font-size: 30px;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   font-weight: bold;
 }
 

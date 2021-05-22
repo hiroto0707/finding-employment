@@ -3,7 +3,16 @@ Rails.application.routes.draw do
   root to: 'users#index'
   devise_for :users
 
-  resources :memos
-  resources :enterprises, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :memos do
+   collection do
+    get 'search'
+   end
+  end
+
+  resources :enterprises do
+   collection do
+    get 'search'
+   end
+ end
   resources :users, only: :show
 end
