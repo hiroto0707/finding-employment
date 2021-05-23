@@ -12,10 +12,12 @@ class Enterprise < ApplicationRecord
    
   validates :industry_id, numericality: { other_than: 0 }
 
-  #def self.search(search)
-    #if search
-
-    #else
-      #all
-    #end
+  
+  def self.search(search)
+    if search 
+      Enterprise.where('title LIKE(?)', "%#{search}%")
+    else
+      Enterprise.all
+    end
+  end
 end

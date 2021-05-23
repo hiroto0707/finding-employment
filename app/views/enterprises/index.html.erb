@@ -1,5 +1,9 @@
 <body class="back">
 
+<%= form_with(url: search_enterprises_path,local: true,method: :get, class:"search-form") do |form| %>
+ <%= form.text_field :keyword, placeholder: "企業名や業界などの検索", class:"search-input" %>
+ <%= form.submit "検索", class: "search-btn" %>
+<% end %> 
 
 <div class='enterpise-info'>
 <div class="industry-category">IT・ソフトウェア・情報処理</div>
