@@ -35,10 +35,6 @@ class EnterprisesController < ApplicationController
     redirect_to enterprises_path
   end
 
-  def search
-  end
-  
-
 
   private
 

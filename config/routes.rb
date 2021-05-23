@@ -9,10 +9,6 @@ Rails.application.routes.draw do
    end
   end
 
-  resources :enterprises do
-   collection do
-    get 'search'
-   end
- end
+  resources :enterprises 
   resources :users, only: :show
 end

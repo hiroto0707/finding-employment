@@ -1,0 +1,21 @@
+<body class="back">
+<div class='memo-info'>
+<ul class='memo-lists'>
+<% @memos.each do |memo| %>
+ <li class='list'>
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= memo.title %></div>
+  <div class="card-body text-dark">
+    <h5 class="card-title"><%= memo.selection_status %></h5>
+    <p class="card-text"><%= memo.body %></p>
+    <%= link_to "編集", edit_memo_path(memo.id), method: :get, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
+    <% nil %>
+  </div>
+<% end %>
+</li> 
+</ul> 
+</div>
+</body>
+
+
