@@ -1,7 +1,18 @@
+$cWhite: white;
+$cBlack: black;
 
 .back-image {
   background-image: url("office.png");
 } 
+
+.enterpise-info {
+  margin-top: 5%;
+}
+
+.list-card {
+  margin: 5px;
+  display: inline-block;
+}
 
 .enterprise-box {
   height: 800px;
@@ -17,7 +28,7 @@
   width: 50%;
   resize: none;
   margin-bottom: 20px;
-  border: 2px solid black;
+  border: 2px solid $cBlack;
 }
 
 
@@ -26,7 +37,7 @@
   width: 50%;
   resize: none;
   margin-bottom: 20px;
-  border: 2px solid black;
+  border: 2px solid $cBlack;
 }
 
 .card-header {
@@ -41,9 +52,9 @@
 .enterprise-red-btn {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid black;
-  color: black;
-  background-color: white;
+  border: 2px solid $cBlack;
+  color: $cBlack;
+  background-color: $cWhite;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;

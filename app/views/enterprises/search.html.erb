@@ -1,0 +1,29 @@
+<body class="back">
+
+<div class='enterpise-info'>
+<ul class='enterpise-lists'>
+<% @enterprises.each do |enterprise| %>
+ <li class='list-card'>
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <%= enterprise.title %>
+      <div class="namecolor">
+        <%= link_to "#{enterprise.user.name}" + "さん", user_path(enterprise.user.id), method: :get, class: "card_user" %>
+      </div>
+    </div>
+    <div class="card-body text-info">
+      <h5 class="card-title"><%= enterprise.theme %></h5>
+      <p class="card-text"><%= enterprise.text %></p>
+    <% if user_signed_in? && current_user.id == enterprise.user_id %>
+      <%= link_to "編集", edit_enterprise_path(enterprise.id), method: :get, :class=>"enterprise-red-btn" %>
+      <%= link_to "削除", enterprise_path(enterprise.id), method: :delete, class: "enterprise-red-btn" %>
+    <% else %>
+     <% nil %>
+    <% end %>
+    </div>
+<% end %>
+</li> 
+</ul> 
+</div>
+
+</body>

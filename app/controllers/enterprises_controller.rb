@@ -35,9 +35,11 @@ class EnterprisesController < ApplicationController
     redirect_to enterprises_path
   end
 
+  def search
+    @enterprises = Enterprise.search(params[:keyword])
+  end
 
   private
-
   def enterprise_return
     @enterprise = Enterprise.find(params[:id])
     unless user_signed_in? && current_user.id == @enterprise.user_id

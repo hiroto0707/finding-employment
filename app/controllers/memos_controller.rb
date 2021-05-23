@@ -36,6 +36,10 @@ class MemosController < ApplicationController
     redirect_to memos_path
   end
 
+  def search
+    @memos = Memo.search(params[:keyword])
+  end
+
   private
   
   def set_memo

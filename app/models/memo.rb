@@ -12,4 +12,12 @@ class Memo < ApplicationRecord
   
   validates :industry_id, numericality: { other_than: 0 }
 
+  def self.search(search)
+    if search 
+      Memo.where('title LIKE(?)', "%#{search}%")
+    else
+      Memo.all
+    end
+  end
+
 end
