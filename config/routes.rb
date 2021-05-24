@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root to: 'users#index'
   devise_for :users
-
+  
   resources :memos do
    collection do
     get 'search'
@@ -14,5 +14,6 @@ Rails.application.routes.draw do
      get 'search'
     end
    end
+
   resources :users, only: :show
 end

@@ -11,7 +11,6 @@ class Enterprise < ApplicationRecord
   end
    
   validates :industry_id, numericality: { other_than: 0 }
-
   
   def self.search(search)
     if search 
@@ -20,4 +19,5 @@ class Enterprise < ApplicationRecord
       Enterprise.all
     end
   end
+
 end

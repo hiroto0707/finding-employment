@@ -39,6 +39,7 @@ class EnterprisesController < ApplicationController
     @enterprises = Enterprise.search(params[:keyword])
   end
 
+
   private
   def enterprise_return
     @enterprise = Enterprise.find(params[:id])
