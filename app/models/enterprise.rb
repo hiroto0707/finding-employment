@@ -2,6 +2,8 @@ class Enterprise < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
   belongs_to :industry
+  has_many :comments, dependent: :destroy
+
 
 
   with_options presence: true do
