@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
  has_many :enterprises
- has_many :comments
  has_many :memos
  
  validates :name, presence: true
