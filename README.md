@@ -1,3 +1,8 @@
+
+# URl: https://finding-employment.herokuapp.com/
+
+#
+
 # テーブル設計
 
 ## users テーブル
@@ -12,7 +17,6 @@
 
 - has_many : enterprises
 - has_one : memo
-- has_many : comments
 
 ## memos テーブル
 
@@ -42,15 +46,7 @@
 ### Association
 
 - belongs_to : user
-- belongs_to : comment
 
-## comments
-
-| Column        | Type    | Options                           |
-| ------------- | ------- | --------------------------------- |
-| text          | text    | null: false                       |
-| user          | references | null: false, foreign_key: true |
-| enterprise    | references | null: false, foreign_key: true |
 
 ### Association
 
