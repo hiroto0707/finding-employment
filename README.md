@@ -1,7 +1,7 @@
 
 # URl: https://finding-employment.herokuapp.com/
 
-#
+
 
 # テーブル設計
 
@@ -52,14 +52,3 @@
 
 - belongs_to : user
 - belongs_to : enterprise
-
-## comments テーブル
-
-| Column     | Type   | Options     |
-| --------   | ------ | ----------- |
-| text       | text   | not null    |
-| user       | references |         |
-
-### Association
-
-- belongs_to : user
