@@ -92,7 +92,6 @@ Visual Studio Code
 | ------------- | ------- | --------------------------------- |
 | industry_id   | integer | null: false                       |
 | title         | string  | null: false                       |
-| image         | ActiveStorageで実装                         |
 | text          | text    | null: false                       |
 | theme         | text    | null: false                       | 
 | user          | references | null: false, foreign_key: true |
