@@ -99,4 +99,3 @@ Visual Studio Code
 ### Association
 
 - belongs_to : user
-
