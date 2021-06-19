@@ -80,6 +80,7 @@ Visual Studio Code
 | selection＿status | text    | null: false                       |
 | body              | text    | null: false                       |
 | industry_id       | integer | null: false                       |
+| enterprise_url    | string  | --------------------------------- |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
@@ -88,13 +89,14 @@ Visual Studio Code
 
 ## Enterprises テーブル
 
-| Column        | Type    | Options                           |
-| ------------- | ------- | --------------------------------- |
-| industry_id   | integer | null: false                       |
-| title         | string  | null: false                       |
-| text          | text    | null: false                       |
-| theme         | text    | null: false                       | 
-| user          | references | null: false, foreign_key: true |
+| Column         | Type    | Options                           |
+| -------------  | ------- | --------------------------------- |
+| industry_id    | integer | null: false                       |
+| title          | string  | null: false                       |
+| text           | text    | null: false                       |
+| theme          | text    | null: false                       | 
+| enterprise_url | string  | --------------------------------- |
+| user           | references | null: false, foreign_key: true |
 
 ### Association
 

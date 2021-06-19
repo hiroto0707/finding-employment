@@ -12,6 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2021_05_14_130133) do
 
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "text"
+    t.bigint "user_id"
+    t.bigint "enterprise_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["enterprise_id"], name: "index_comments_on_enterprise_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "enterprises", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "industry_id", null: false
     t.string "title"
@@ -45,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_05_14_130133) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "enterprises"
+  add_foreign_key "comments", "users"
   add_foreign_key "enterprises", "users"
   add_foreign_key "memos", "users"
 end
