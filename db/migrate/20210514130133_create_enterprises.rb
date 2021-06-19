@@ -5,7 +5,7 @@ class CreateEnterprises < ActiveRecord::Migration[6.0]
       t.string :title,              nill: false
       t.text :text,                 null: false
       t.text :theme,                null: false
-      t.string :enterprise_url
+      enterprise_url
       t.references :user,           null: false,foreign_key: true
       t.timestamps
     end

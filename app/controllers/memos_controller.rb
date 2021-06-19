@@ -13,7 +13,7 @@ class MemosController < ApplicationController
 
   def create
     @memo = Memo.new(memo_params)
-    if @memo.save
+    if @memo.save!
       redirect_to memos_path
     else
       render :new
@@ -53,7 +53,7 @@ class MemosController < ApplicationController
   end
 
   def memo_params
-    params.require(:memo).permit(:title, :selection_status, :body, :industry_id).merge(user_id: current_user.id)
+    params.require(:memo).permit(:title, :enterprise_url,:selection_status, :body, :industry_id).merge(user_id: current_user.id)
   end
 end
 
