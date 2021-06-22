@@ -10,9 +10,9 @@
  <li class='list'>
  <% if memo.industry_id == 1 %>
 <div class="card border-info mb-3" style="max-width: 18rem;">
-  <div class="card-header"><%= memo.title %></div>
-  <div class="card-header"><% memo.enterprise_url %></div>
-  <%#= Rinku.auto_link(@memo.enterprise_url, :all, 'target="_blank"').html_safe %>
+  <div class="card-header"><%= memo.title%></div>
+  <%# binding.pry %>
+  <%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe %>
   <div class="card-body text-info">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>

@@ -19,5 +19,4 @@ class Memo < ApplicationRecord
       Memo.all
     end
   end
-
 end
