@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_130133) do
     t.string "title"
     t.text "text", null: false
     t.text "theme", null: false
+    t.string "enterprise_url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_130133) do
     t.text "selection_status", null: false
     t.text "body", null: false
     t.integer "industry_id", null: false
+    t.string "enterprise_url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

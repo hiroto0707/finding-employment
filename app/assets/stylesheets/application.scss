@@ -66,17 +66,26 @@ h1 {
   text-indent: 1em;
 }
 
+.anchor {
+  color: $cBlack;
+  text-align: center;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  text-decoration: none;
+  color: $cBlack;
+  }
+
 a {
   color: $cBlack;
   text-align: center;
   text-decoration: none;
-
 }
-
- a:hover {
-  text-decoration: none;
-  color: $cBlack;
-  }
+    
+a:hover {
+  color: #03b0f5;
+}
 
 .row {
   width: 100%;

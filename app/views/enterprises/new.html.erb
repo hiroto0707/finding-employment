@@ -5,6 +5,7 @@
     投稿
     <%= f.collection_select(:industry_id, Industry.all, :id, :industry, {}, {class:"industry-select"}) %>
     <%= f.text_field :title, class:"title", placeholder:"企業名" %>
+    <%= f.text_area :enterprise_url, class:"enterprise_url", placeholder:"企業関連のURL(任意)" %>
     <%= f.text_area :theme, class:"theme", placeholder:"選考段階・面接で聞かれたこと等々" %>
     <%= f.text_area :text, class:"text", placeholder:"選考での感想やアドバイス" %>
     <%= f.submit "投稿" ,class:"btn" %>

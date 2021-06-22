@@ -3,7 +3,6 @@
  <%= form.text_field :keyword, placeholder: "企業名や業界などの検索", class:"search-input" %>
  <%= form.submit "検索", class: "search-btn" %>
 <% end %> 
-
 <div class='memo-info'>
 <div class="industry-category">IT・ソフトウェア・情報処理</div>
 <ul class='memo-lists'>
@@ -11,12 +10,13 @@
  <li class='list'>
  <% if memo.industry_id == 1 %>
 <div class="card border-info mb-3" style="max-width: 18rem;">
-  <div class="card-header"><%= memo.title %></div>
+  <div class="card-header"><%= memo.title%></div>
   <div class="card-body text-info">
+  <div class="footer"><%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe%></div>
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
     <%= link_to "編集", edit_memo_path(memo.id), method: :get, :class=>"memo-red-btn" %>
-   <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
@@ -25,6 +25,7 @@
 </li> 
 </ul> 
 </div>
+
 
 <div class='memo-info'>
 <div class="industry-category">不動産・建築</div>
