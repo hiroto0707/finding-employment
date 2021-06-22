@@ -11,20 +11,21 @@
  <% if memo.industry_id == 1 %>
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header"><%= memo.title%></div>
-  <%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe%>
   <div class="card-body text-info">
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
     <%= link_to "編集", edit_memo_path(memo.id), method: :get, :class=>"memo-red-btn" %>
-   <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
+    <%= link_to "削除", memo_path(memo.id), method: :delete, class: "memo-red-btn" %>
     <% else %>
     <% nil %>
   </div>
   <% end %>
+  <div class="footer"><%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe%></div>
 <% end %>
 </li> 
 </ul> 
 </div>
+
 
 <div class='memo-info'>
 <div class="industry-category">不動産・建築</div>
