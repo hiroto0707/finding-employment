@@ -12,6 +12,7 @@
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header"><%= memo.title%></div>
   <div class="card-body text-info">
+  <div class="footer"><%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe%></div>
     <h5 class="card-title"><%= memo.selection_status %></h5>
     <p class="card-text"><%= memo.body %></p>
     <%= link_to "編集", edit_memo_path(memo.id), method: :get, :class=>"memo-red-btn" %>
@@ -20,7 +21,6 @@
     <% nil %>
   </div>
   <% end %>
-  <div class="footer"><%= Rinku.auto_link(memo.enterprise_url, :all, 'target="_blank"').html_safe%></div>
 <% end %>
 </li> 
 </ul> 
